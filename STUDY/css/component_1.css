@@ -1,48 +1,17 @@
-/* Icons (made with Icomoon.io) */
-
 @font-face {
 	font-family: 'feather';
-	font-weight: normal;
-	font-style: normal;
-	src: url('../fonts/feather/feather.eot?1gafuo');
 	src: url('../fonts/feather/feather.eot?1gafuo#iefix') format('embedded-opentype'), url('../fonts/feather/feather.woff2?1gafuo') format('woff2'), url('../fonts/feather/feather.ttf?1gafuo') format('truetype'), url('../fonts/feather/feather.woff?1gafuo') format('woff'), url('../fonts/feather/feather.svg?1gafuo#feather') format('svg');
 }
-
-.icon {
-	font-family: 'feather';
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	line-height: 1;
-	text-transform: none;
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	speak: none;
-}
-
-.icon--arrow-left:before {
-	content: '\e901';
-}
-
-.icon--menu:before {
-	content: '\e903';
-}
-
-.icon--cross:before {
-	content: '\e117';
-}
-
 
 /* Menu styles */
 
 .menu {
 	position: fixed;
-	top: 120px;
+	top:80px;
 	left: 0;
-	width: 300px;
+	width: 219px;
 	height: calc(100vh - 120px);
-	background: #1c1d22;
+	background: #434343;
 }
 
 .menu__wrap {
@@ -85,7 +54,7 @@
 	position: relative;
 	display: block;
 	padding: 1em 2.5em 1em 1.5em;
-	color: #bdbdbd;
+	color: lightgoldenrodyellow;
 	-webkit-transition: color 0.1s;
 	transition: color 0.1s;
 }
@@ -103,7 +72,7 @@
 .menu__link:focus,
 .menu__link[data-submenu]:hover::after,
 .menu__link[data-submenu]:focus::after {
-	color: #5c5edc;
+	color: #66cccc;
 }
 
 .menu__link--current::before {
@@ -114,7 +83,7 @@
 	top: 50%;
 	left: 0.5em;
 	height: 4px;
-	color: #5c5edc;
+	color: #bbc10a;
 }
 
 [class^='animate-'],
