@@ -35,7 +35,7 @@ input.addEventListener("blur", e => {
 })
 
 function searchtext() {
-    result.innerHTML = input.value;
+    result.innerHTML = '';
 
 
     // 标题搜索
@@ -118,5 +118,5 @@ function searchtext() {
         }
     }
 
-    result.innerHTML = result.innerHTML.substring(0, result.innerHTML.length - 4) + textsearchresult.substring(0, textsearchresult.length - 4) 
+    result.innerHTML = result.innerHTML + textsearchresult.substring(0, textsearchresult.length - 4) 
 }
