@@ -54,7 +54,7 @@ function searchtext() {
         for (i = 0; i < resulttitlecache.length; i++) {
             for (j = 0; j < obj.length; j++) {
                 if (obj[j]['title'] == resulttitlecache[i]) {
-                    titlesearchresult = '<a href="https://offsaying.github.io/OS_Jupiter/Docs/' + obj[j]["path"] + '" style="color:#FAFAD2;font-size:18px">' + obj[j]['title'].replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#7cfc00">' + input.value + '</mark>')+'<br>'
+                    titlesearchresult = '<a href="https://offsaying.github.io/OS_Jupiter/Docs/' + obj[j]["path"] + '" style="color:#7cfc00;font-size:18px">' + obj[j]['title'].replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#7cfc00">' + input.value + '</mark>')+'<br>'
                     resultstr = titlesearchresult + resultstr
                 }
             }
@@ -104,7 +104,7 @@ function searchtext() {
                             textorder++
                         }
 
-                        resultfortext = '<a href="https://offsaying.github.io/OS_Jupiter/Docs/' + obj[k]["path"] + '" style="color:#FAFAD2;font-size:18px">' + obj[k]['title'] + '</a>&nbsp;-&nbsp;' + targetscorecache[i] + '&nbsp;Matched&nbsp;-&nbsp;...' + obj[k]['text'].substring(textorder, textorder + 100).replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#7cfc00">' + input.value + '</mark>')+'...<br>'
+                        resultfortext = '<a href="https://offsaying.github.io/OS_Jupiter/Docs/' + obj[k]["path"] + '" style="color:#7cfc00;font-size:18px">' + obj[k]['title'] + '</a>&nbsp;-&nbsp;' + targetscorecache[i] + '&nbsp;Matched&nbsp;-&nbsp;...' + obj[k]['text'].substring(textorder, textorder + 100).replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#7cfc00">' + input.value + '</mark>')+'...<br>'
                         textsearchresult = textsearchresult + resultfortext;
                     }
                 }
