@@ -1,3 +1,4 @@
+let SearchResult = '[{"title": "uni", "path": "uni.html", "text": "HellonihaoHelloHelloHellonihao"}, {"title": "test", "path": "test.html", "text": "WorldHello"}]';
 obj = JSON.parse(SearchResult);
 
 function check() {
