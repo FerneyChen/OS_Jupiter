@@ -104,7 +104,7 @@ function searchtext() {
                             textorder++
                         }
 
-                        resultfortext = '<a href="https://offsaying.github.io/OS_Jupiter/Docs/' + obj[k]["path"] + '" style="color:#f0e68c;font-size:18px">' + obj[k]['title'] + '</a>&nbsp;-&nbsp;' + targetscorecache[i] + '&nbsp;Matched&nbsp;-&nbsp;...' + obj[k]['text'].substring(textorder, textorder + 100).replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')+'...<br>'
+                        resultfortext = '<a href="https://offsaying.github.io/OS_Jupiter/Docs/' + obj[k]["path"] + '" style="color:#f0e68c;font-size:18px">' + obj[k]['title'] + '</a>&nbsp;-&nbsp;' + targetscorecache[i] + '&nbsp;Matched in contents'/* + obj[k]['text'].substring(textorder, textorder + 100).replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')*/+'<br>'
                         textsearchresult = textsearchresult + resultfortext;
                     }
                 }
