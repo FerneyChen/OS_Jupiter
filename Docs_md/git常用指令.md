@@ -42,8 +42,8 @@
 如：git reset --hard HEAD~2 #回退至上上个版本
 
 >版本号回退：将文件按版本号回退
->>git reset --hard HEAD 版本号
-如：git reset --hard HEAD abcd123
+>>git reset --hard 版本号
+如：git reset --hard abcd123
 
 >撤销操作
 >>git restore 文件名
