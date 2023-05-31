@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!--=============== LOADING ===============-->
+    <script src="https://ferneychen.github.io/assets/js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://ferneychen.github.io/assets/css/loading.css">
+    <body><div class="loaderbg"><body><h1 class="loading">Loading<div class="loading__dots"><span class="loading__dot"></span><span class="loading__dot"></span><span class="loading__dot"></span><span class="loading__dot"><span class="loading__dot-down"></span></span></div></h1><script src="https://ferneychen.github.io/assets/js/loading_main.js"></script></body></div>
+
+
     <link rel="stylesheet" type="text/css" href="https://ferneychen.github.io/assets/css/demo_YUCHEN.css" />
 		<link rel="stylesheet" type="text/css" href="https://ferneychen.github.io/assets/css/style8_YUCHEN.css" />
 		<script>document.documentElement.className = 'js';</script>
@@ -21,8 +28,9 @@
     />
 
     <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="https://ferneychen.github.io/OS_Jupiter/Docs/katex.min.css">
     <link rel="stylesheet" href="https://ferneychen.github.io/assets/css/styles_YUCHEN.css" />
-    <title>Alg_Lec_15</title>
+    <title></title> <!--此处修改网页标题-->
   </head>
   
   	<body class="demo-8">
@@ -30,16 +38,13 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="https://ferneychen.github.io" class="nav__logo" style="font-family: poppins;">&nbsp;Yu <span>Chen</span> </a>
-        <button id="btn-search" class="btn btn--search"><i class="ri-apple-fill" ></i></button>
+        <a href="https://ferneychen.github.io" class="nav__logo" style="font-family: poppins;">&nbsp;<i class="ri-apple-fill" ></i> Ferney <span></span> </a>
+        <div class="btn btn--search">    
+          <a id="btn-search" ><i class="ri-finder-fill"></i></a>
+        </div>
+        
       </nav>
     </header>
-
-
-<!-- =================================== START ========================================-->
-
-
-
 <!DOCTYPE html>
   <html>
     <head>
@@ -666,30 +671,34 @@ html body kbd {
     
   </html>
 
+
+
+
+
 <!-- =================================== END ========================================-->
 
 
 
 
-      </main>
-       <div class="search">
-			<button id="btn-search-close" class="btn btn--search-close"><i class="ri-fingerprint-line"></i></button>
-      <div class="search__form-inner">
-					<input id="input" oninput="searchtext()" class="search__input" name="search" type="search" placeholder="Search?" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-				</div>
-					<p class="search__suggestion" id="resultlist"></p>
-    </div>
-    <script src="https://ferneychen.github.io/OS_Mars/js/disabled.js"></script><!--禁用-->
-    <script src="https://ferneychen.github.io/assets/js/demo8_YUCHEN.js"></script>
-    <script type="text/javascript" src="https://ferneychen.github.io/searcher.js"></script>
-    <!--=============== SCROLLREVEAL ===============-->
-    <script src="https://ferneychen.github.io/assets/js/scrollreveal_YUCHEN.min.js"></script>
 
-    <!--=============== EMAIL JS ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</main>
+  <div class="search">
+<button id="btn-search-close" class="btn btn--search-close"><i class="ri-fingerprint-line"></i></button>
+<div class="search__form-inner">
+    <input id="input" oninput="searchtext()" class="search__input" name="search" type="search" placeholder="Search?" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+  </div>
+    <p class="search__suggestion" id="resultlist"></p>
+</div>
+<script src="https://ferneychen.github.io/OS_Mars/js/disabled.js"></script><!--禁用-->
+<script src="https://ferneychen.github.io/assets/js/demo8_YUCHEN.js"></script>
+<script type="text/javascript" src="https://ferneychen.github.io/OS_Jupiter/Docs/searcher.js"></script>
 
-    <!--=============== MAIN JS ===============-->
-    <script src="https://ferneychen.github.io/assets/js/Main_YUCHEN.js"></script>
-  </body>
+<!--=============== LOADING ===============-->
+<noscript><style>.loaderbg {display: none;}</style></noscript>
+<script type="text/javascript">$(window).on('load',function(){$(".loaderbg").hide();});/*$(function () {setTimeout(function () {$(".loaderbg").hide();}, 6000);})*/</script>
+
+
+<!--=============== MAIN JS ===============-->
+<script src="https://ferneychen.github.io/assets/js/Main_YUCHEN.js"></script>
+</body>
 </html>
-
