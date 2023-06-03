@@ -54,7 +54,7 @@ function searchtext() {
         for (i = 0; i < resulttitlecache.length; i++) {
             for (j = 0; j < obj.length; j++) {
                 if (obj[j]['title'] == resulttitlecache[i]) {
-                    titlesearchresult = '<a href="https://ferneychen.github.io/OS_Jupiter/Docs/' + obj[j]["path"] + '" style="color:#f0e68c;font-size:18px">' + obj[j]['title'].replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')+' <i class="ri-checkbox-multiple-fill"></i><br>'
+                    titlesearchresult = '<a href="https://ferneychen.github.io/OS_Jupiter/Docs/' + obj[j]["path"] + '" style="font-family:Poppins;color:#f0e68c;font-size:18px">' + obj[j]['title'].replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')+' <i class="ri-check-double-line"></i><br>'
                     resultstr = titlesearchresult + resultstr
                 }
             }
@@ -104,7 +104,7 @@ function searchtext() {
                             textorder++
                         }
 
-                        resultfortext = '<a href="https://ferneychen.github.io/OS_Jupiter/Docs/' + obj[k]["path"] + '" style="color:#f0e68c;font-size:18px">' + obj[k]['title'] + '</a> <i class="ri-checkbox-multiple-blank-fill"></i>&nbsp;-&nbsp;' + targetscorecache[i] + '&nbsp;Matched'/* + obj[k]['text'].substring(textorder, textorder + 100).replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')*/+'<br>'
+                        resultfortext = '<a href="https://ferneychen.github.io/OS_Jupiter/Docs/' + obj[k]["path"] + '" style="font-family:Poppins;color:#f0e68c;font-size:18px">' + obj[k]['title'] + '</a>&nbsp;-&nbsp;' + targetscorecache[i] + '&nbsp;Matched <i class="ri-check-fill"></i>'/* + obj[k]['text'].substring(textorder, textorder + 100).replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')*/+'<br>'
                         textsearchresult = textsearchresult + resultfortext;
                     }
                 }
