@@ -2,7 +2,6 @@
 
 [![](https://img.shields.io/badge/Yu%20Chen-chen11976%40gtiit.edu.cn-%2300FFFF)](chen11976@gtiit.edu.cn)
 
-
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Exercise 1</p>
 >Prove that in a digraph, the sum of all outdegrees equals the sum of all indegrees. What is the analogous statement for a graph?
 
