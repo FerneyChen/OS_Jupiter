@@ -29,5 +29,36 @@ If we use 6 redundant bits for error detection, we can detect and correct up to 
 column 4 has error
 
 
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Problem 3</p>
+
+>Cyclic Redundancy Check (CRC). 
+
+>Given 010001100110111101101111 as a message to be send, define a generator which allows to detect simple, double, and an odd number of errors, and that is also able to detect a burst of 4 errors. 
+
+>After defining a generator, calculate the transmitted message which should be composed of the original message followed by the calculated remainder. All steps of the calculations you make must be submitted. 
+
+>Finally, respond to the following question: Which are the values that both the receiver and transmitter must know for CRC to work?
+
+>$\underline{\mathbf{Sol}} $ 
+Step 1, define a generator:
+>>For simple error detection
+the generator polynomial should have at least two terms.
+>>For double error detection
+the generator polynomial should have at least three terms.
+>>For detecting an odd number of errors
+the generator polynomial should have an even number of terms
+>>For detecting a burst of 4 errors
+the generator should have a length of at least 5
+
+>Thus, the generator polynomial of the form:
+$$G(x) = x^4 + x^k + 1 $$where $k\geq 1$ and k is odd.
+Thus, we can choose, $$ G(x) = x^4 + x^3 + 1  \\
+\xrightarrow[]{}11001$$ 
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Problem 4</p>
+
+
+
 
 
