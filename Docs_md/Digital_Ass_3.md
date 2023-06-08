@@ -3,35 +3,53 @@
 
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Problem 1</p>
 
->part b.
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Part a</p>
+<div style='text-align: center;'><img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/27074cf8-ffb9-4c75-a680-7c101f06cd78 width='' height='250'></div> 
+
+>/(1001) $\because $ we cannot add anything here, this may happen when the number of redundant bit is not satisfied with the restriction (the number of bit is odd).
+>>errors detected in $$1 (101) \\
+0(100)  \\
+$$$$0(0001)  \\
+/(1001)  \\
+1(1101) \\
+$$ 
+>>errors can be corrected:
+$$1 (101) \\
+0(100)  \\
+$$$$0(0001)  \\
+1(1101) \\
+$$  
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Part b</p>
 >>$$1\;\; bit$$ 
-With only one redundant bit, we can detect at most one error.
-For example, if we use a parity bit, we can detect one error, but if two errors occur, the parity check will fail to detect them.
+With only one redundant bit, we can detect at most `0` error.
 >>$$3\;\; bit $$ 
-With three redundant bits, we can detect up to two errors.
-$\because $  three redundant bits can represent up to $2^{3}$ =8 different states.
-For example, if we use a Hamming code with three redundant bits, we can detect up to two errors.
+With only one redundant bit, we can detect at most `1` error.
 >>$$5\;\; bit s$$ 
-With five redundant bits, we can detect up to three errors.
-$\because $ five redundant bits can represent up to $2^{5}$ =32 different states. 
-For example, if we use a Reed-Solomon code with five redundant bits, we can detect up to three errors.
+With only one redundant bit, we can detect at most `2` error.
 >>$$6\;\; bit s$$ 
-With six redundant bits, we can detect up to three errors as well. 
-$\because $ six redundant bits can represent up to $2^{6}$ =64 different states.
-For example, if we use a Golay code with six redundant bits, we can detect up to three errors.
+With only one redundant bit, we can detect at most `2` error.
 
 
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Problem 2</p>
 
 >Parity interleaving 
 
->fig 1
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>fig 1</p>
+
 >>fill the fig 1 as follows:
 <div style='text-align: center;'><img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/0f5d23d1-9e7e-4e3d-aaa2-38b52a0cfc08 width='400' height='300'></div> 
 
->fig 2
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>fig 2</p>
+
+>if using the even parity:
 >>column 1 has error 
 column 4 has error
+
+>if using the odd parity:
+>>column 2 has error 
+column 3 has error
 
 
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Problem 3</p>
@@ -47,23 +65,22 @@ column 4 has error
 >$\underline{\mathbf{Sol}} $ 
 Step 1, define a generator:
 >>For simple error detection
-the generator polynomial should have at least two terms.
+the first and last bits of the generator are 1.
 >>For double error detection
-the generator polynomial should have at least three terms.
+the generator has at least three terms (non-zero)
 >>For detecting an odd number of errors
-the generator polynomial should have an even number of terms
+if the generator contains x + 1
+>
 >>For detecting a burst of 4 errors
-the generator should have a length of at least 5
+>>burst or consecutive errors of at most length 4.
 
->Thus, the generator polynomial of the form:
-$$G(x) = x^4 + x^k + 1 $$where $k\geq 1$ and k is odd.
-Thus, we can choose, $$ G(x) = x^4 + x^3 + 1  \\
-\xrightarrow[]{}11001$$ 
+>Thus, we can choose, $$ G(x) = x^4 + x + 1  \\
+\xrightarrow[]{}10011$$ 
 
 >Thus, the calculation of transmitted message:
-><div style='text-align: center;'><img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/cf725118-4b30-47ff-b72b-98b28e9b70fd width='' height='500'></div> 
+><div style='text-align: center;'><img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/a1940281-38ac-4089-926a-04e75eae2695 width='' height='500'></div> 
 
->Thus, the transmitted message is,$$010001100110111101101111\boxed{0100}$$  
+>Thus, the transmitted message is,$$010001100110111101101111\boxed{0000}$$  
 
 >The values that both the receiver and transmitter must know for CRC to work:
 $$\boxed{ The\; \; generator\;\;  polynomial }$$Or in binary bits 
@@ -110,6 +127,57 @@ d(000111111,111111111) = 3 \\
 $$$$d(111000111,111111000) = 6 \\
 d(111000111,111111111) =3  $$$$d(111111111,111111000) = 3$$  
 >>Thus, the code hamming distance is 3.
+
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Part 2</p>
+
+>Given the following message: 00101001001 using 7 data bits, and 4 check bits.
+
+0|0|1|`0`|1|0|0|`1`|0|`0`|`1`
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |
+11|10|9|8|7|6|5|4|3|2|1
+
+>$\underline{\mathbf{Sol}} $ 
+I will use the way of this [link](https://www.geeksforgeeks.org/hamming-code-in-computer-network/) that is provided by Prof.Simon on Moodle, and it is different from the way in our text book (and slides)
+>>In short, I will use way of checking from right to left.
+
+>Data bits, $$0011000$$ Check bits, that is in the position of $2^{0},2^{1},2^{2},2^{3}$ $$0101$$ 
+
+Bit|`0`|0|`1`|0|`1`|0|`0`|1|`0`|0|`1`
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |
+Position|11|10|9|8|7|6|5|4|3|2|1
+>using even parity $\xrightarrow[]{}$ 1
+
+Bit|`0`|`0`|1|0|`1`|`0`|0|1|`0`|`0`|1
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |
+Position|11|10|9|8|7|6|5|4|3|2|1
+>using even parity $\xrightarrow[]{}$ 1 
+
+Bit|0|0|1|0|`1`|`0`|`0`|`1`|0|0|1
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |
+Position|11|10|9|8|7|6|5|4|3|2|1
+>using even parity $\xrightarrow[]{}$ 0 
+
+Bit|`0`|`0`|`1`|`0`|1|0|0|1|0|0|1
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |
+Position|11|10|9|8|7|6|5|4|3|2|1
+>using even parity $\xrightarrow[]{}$ 1 
+
+>Thus, $$1011 \xrightarrow[]{} 11 $$ The bits give the binary number 1011 whose decimal representation is 11.
+Thus, $$bit\;\; 11$$ contains an error.
+To correct the error the $11^{th}$  bit is changed from 0 to 1.
+
+>Which information must be known by both the transmitter and the receiver?
+>>1) Both the transmitter and the receiver must know that they are using the same method, for instance, in this case, they should both use the hamming code, that is the most important thing of all.
+>
+>>2) The number of data bits and parity bits used in message.
+>
+>>3. The way you used also matters and need to be known by both the transmitter and the receiver (either checking from left to right or from right to left).
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Problem 5</p>
+>
 
 
 
