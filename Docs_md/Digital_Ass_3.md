@@ -4,16 +4,21 @@
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Problem 1</p>
 
 >part b.
->>1 bit:
-If we use 1 redundant bit for error detection $\xrightarrow[]{}$  we can detect a $ \boxed{single}$ error in the data.
-By adding a parity bit to the data, the parity bit is set to 1 or 0 to ensure that the total number of 1s in the data plus the parity bit is either odd or even. 
-When the data is received, the parity bit is checked. If the parity bit is incorrect, it means that a single bit error has occurred in the data.
->>2 bits:
-If we use 3 redundant bits for error detection, we can detect and correct up to a $ \boxed{single}$  error in the data.
->>5 bits:
-If we use 5 redundant bits for error detection, we can detect and correct up to 2 errors in the data.
->>6 bits:
-If we use 6 redundant bits for error detection, we can detect and correct up to 2 errors in the data.
+>>$$1\;\; bit$$ 
+With only one redundant bit, we can detect at most one error.
+For example, if we use a parity bit, we can detect one error, but if two errors occur, the parity check will fail to detect them.
+>>$$3\;\; bit $$ 
+With three redundant bits, we can detect up to two errors.
+$\because $  three redundant bits can represent up to $2^{3}$ =8 different states.
+For example, if we use a Hamming code with three redundant bits, we can detect up to two errors.
+>>$$5\;\; bit s$$ 
+With five redundant bits, we can detect up to three errors.
+$\because $ five redundant bits can represent up to $2^{5}$ =32 different states. 
+For example, if we use a Reed-Solomon code with five redundant bits, we can detect up to three errors.
+>>$$6\;\; bit s$$ 
+With six redundant bits, we can detect up to three errors as well. 
+$\because $ six redundant bits can represent up to $2^{6}$ =64 different states.
+For example, if we use a Golay code with six redundant bits, we can detect up to three errors.
 
 
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Problem 2</p>
@@ -55,8 +60,63 @@ $$G(x) = x^4 + x^k + 1 $$where $k\geq 1$ and k is odd.
 Thus, we can choose, $$ G(x) = x^4 + x^3 + 1  \\
 \xrightarrow[]{}11001$$ 
 
+>Thus, the calculation of transmitted message:
+><div style='text-align: center;'><img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/cf725118-4b30-47ff-b72b-98b28e9b70fd width='' height='500'></div> 
+
+>Thus, the transmitted message is,$$010001100110111101101111\boxed{0100}$$  
+
+>The values that both the receiver and transmitter must know for CRC to work:
+$$\boxed{ The\; \; generator\;\;  polynomial }$$Or in binary bits 
+The receiver will use the same polynomial to perform a CRC calculation on the received data to confirm the data received is right.
+>>Other things like:
+>
+>>`The bit ordering`, that is LSB (Least Significant Bit) first or MSB (Most Significant Bit) first. The transmitter and receiver must agree on which bit ordering to use.
+>
+>>`The initial value of the register`, which is usually all 0 or 1, depending on the CRC implementation. Both the transmitter and receiver must start with the same initial value of the register.
+
 
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Problem 4</p>
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Part 1</p>
+
+000000000|111000000|000111000|000000111
+|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-:|:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: |:-: | 
+|000111111|111000111|111111000|111111111
+>$$d(000000000,111000000) = 3 \\
+d(000000000,000111000) = 3 \\
+d(000000000,000000111) = 3 \\
+d(000000000,000111111) = 6 \\
+d(000000000,111000111) = 6 \\
+d(000000000,111111000) = 6 \\
+d(000000000,111111111) = 9 \\
+$$$$d(111000000,000111000) = 6 \\
+d(111000000,000000111) = 6 \\
+d(111000000,000111111) = 9 \\
+d(111000000,111000111) = 3 \\
+d(111000000,111111000) = 3 \\
+d(111000000,111111111) = 6 \\
+$$$$d(000111000,000000111) = 6 \\
+d(000111000,000111111) =  3\\
+d(000111000,111000111) =  9\\
+d(000111000,111111000) = 3 \\
+d(000111000,111111111) = 6\\
+$$$$d(000000111, 000111111) = 3 \\
+d(000000111,111000111) = 3\\
+d(000000111,111111000) =  9\\
+d(000000111,111111111) =  6 \\
+$$$$d(000111111,111000111) =  6\\
+d(000111111,111111000) = 6 \\
+d(000111111,111111111) = 3 \\
+$$$$d(111000111,111111000) = 6 \\
+d(111000111,111111111) =3  $$$$d(111111111,111111000) = 3$$  
+>>Thus, the code hamming distance is 3.
+
+
+
+
+
+
+
 
 
 
