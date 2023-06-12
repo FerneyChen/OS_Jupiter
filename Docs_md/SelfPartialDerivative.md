@@ -97,6 +97,27 @@ $=1+\cos 2$
 
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 8</p>
 
+>$f(x,y,z) =x^{5}y^{2}z^{4}$ 
+>>$f_{x}=5x^{4}(y^{2}z^{4}) $ 
+>
+>>$f_{y}=2y(x^{5}z^{4}) $ 
+>
+>>$f_{z}=4z^{3}(x^{5}y^{2}) $ 
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 9</p>
+
+>$w=z^{3}(\ln zy)(e^{x^{2}y^{3}z^{4 }})  $ 
+>
+>>$\frac{\partial w}{\partial x}=z^{3}(\ln zy )(e^{x^{2}y^{3}z^{4}})(y^{3}z^{4}2x)   $ 
+>
+>>$\frac{\partial w}{\partial y}=z^{3} (\frac{1}{y}(e^{x^{2}y^{3}z^{4}})+(\ln zy )(e^{x^{2}y^{3}z^{4}})  (3x^{2}z^{4}y^{2}) ) \\
+= z^{3}(\frac{e^{x^{2}y^{3}z^{4}}}{y}+(\ln zy )(e^{x^{2}y^{3}z^{4}})  (3x^{2}z^{4}y^{2}) )) $ 
+>
+>>$\frac{\partial w}{\partial z}=3z^{2}(\ln zy )(e^{x^{2}y^{3}z^{4}})+z^{2}(e^{x^{2}y^{3}z^{4}}) +z^{3}(\ln zy) (e^{x^{2}y^{3}z^{4}})(4z^{3}x^{2}y^{3}) \\
+=z^{2}(e^{x^{2}y^{3}z^{4}})(3\ln zy+1+4z^{4}x^{2}y^{3}\ln zy)        $ 
+
+>>$\frac{\partial w}{\partial z}=$ 
 
 
 
