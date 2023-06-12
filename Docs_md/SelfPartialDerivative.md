@@ -88,6 +88,15 @@ $=1+\cos 2$
 >>$\frac{\partial z}{\partial x}=\frac{\frac{2}{y}x}{\frac{x^{2}}{y}}=\frac{2}{x}$ 
 >
 >>$\frac{\partial z}{\partial y}=\frac{-x^{2}y^{-2}}{\frac{x^{2}}{y}}=\frac{-1}{y}$ 
+>
+>>If we evaluate the values in (1,2)
+>
+>>$\frac{\partial z}{\partial x}=\frac{2}{1}=2 \\
+\frac{\partial z}{\partial y }=-\frac{1}{2}$ 
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 8</p>
+
 
 
 
