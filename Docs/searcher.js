@@ -39,7 +39,7 @@ function searchtext() {
     result.innerHTML = '';
 
 
-    // ±êÌâËÑË÷
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     resultcount = 0;
     resultstr = '';
     var resulttitlecache = new Array()
@@ -50,12 +50,12 @@ function searchtext() {
         }
     }
 
-    // ±êÌâËÑË÷½á¹ûÕ¹Ê¾
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹Ê¾
     if (resultcount !== 0 && resultcount !== obj.length) {
         for (i = 0; i < resulttitlecache.length; i++) {
             for (j = 0; j < obj.length; j++) {
                 if (obj[j]['title'] == resulttitlecache[i]) {
-                    titlesearchresult = '<a href="https://ferneychen.github.io/OS_Jupiter/Docs/' + obj[j]["path"] + '" style="font-family:Poppins;color:#f0e68c;font-size:18px">' + obj[j]['title'].replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')+' <i class="ri-check-double-line"></i><br>'
+                    titlesearchresult = '<a href="https://offsaying.github.io/OS_Jupiter/Docs/' + obj[j]["path"] + '" style="font-family:Poppins;color:#f0e68c;font-size:18px">' + obj[j]['title'].replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')+' <i class="ri-check-double-line"></i><br>'
                     resultstr = titlesearchresult + resultstr
                 }
             }
@@ -63,7 +63,7 @@ function searchtext() {
         }
     }
 
-    // ÕýÎÄËÑË÷
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     var resulttextcache = new Array()
     for (i = 0; i < obj.length; i++) {
         if (obj[i]['text'].includes(input.value) == true) {
@@ -72,7 +72,7 @@ function searchtext() {
         }
     }
 
-    // ÕýÎÄËÑË÷½á¹û¼ÆÊý
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     var targetname = new Array()
     var targetscore = new Array()
     if (resulttextcache.length !== 0 && input.value !== '') {
@@ -86,7 +86,7 @@ function searchtext() {
         }
     }
 
-    //ÅÅÐòÏà¹ØÑ¡Ïî
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
     var targetscorecache = targetscore.concat([]);
     var resultfortext = '';
     var textsearchresult = ''
@@ -96,16 +96,16 @@ function searchtext() {
     for (i = 0; i < targetscorecache.length; i++) {
         for (j = 0; j < targetscore.length; j++) {
             if (targetscorecache[i] == targetscore[j]) {
-                console.log('ÎÄÕÂÅÅÐò:' + targetname[j])
+                console.log('ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:' + targetname[j])
                 for (k = 0; k < obj.length; k++) {
                     if (obj[k]['title'] == targetname[j]) {
-                        // È·ÈÏÑ¡Çø
+                        // È·ï¿½ï¿½Ñ¡ï¿½ï¿½
                         textorder = obj[k]['text'].indexOf(input.value) - 15;
                         while (textorder < 0) {
                             textorder++
                         }
 
-                        resultfortext = '<a href="https://ferneychen.github.io/OS_Jupiter/Docs/' + obj[k]["path"] + '" style="font-family:Poppins;color:#f0e68c;font-size:18px">' + obj[k]['title'] + '</a>&nbsp;-&nbsp;' + targetscorecache[i] + '&nbsp;Matched <i class="ri-check-fill"></i>'/* + obj[k]['text'].substring(textorder, textorder + 100).replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')*/+'<br>'
+                        resultfortext = '<a href="https://offsaying.github.io/OS_Jupiter/Docs/' + obj[k]["path"] + '" style="font-family:Poppins;color:#f0e68c;font-size:18px">' + obj[k]['title'] + '</a>&nbsp;-&nbsp;' + targetscorecache[i] + '&nbsp;Matched <i class="ri-check-fill"></i>'/* + obj[k]['text'].substring(textorder, textorder + 100).replace(new RegExp(input.value, 'g'), '<mark style="background-color:transparent;color:#00ffff">' + input.value + '</mark>')*/+'<br>'
                         textsearchresult = textsearchresult + resultfortext;
                     }
                 }

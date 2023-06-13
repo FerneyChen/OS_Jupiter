@@ -87,7 +87,7 @@ $\xrightarrow[]{}$ find the corresponding $x_i$ in our current column
 This takes $\boxed{y_{1}}$  our first row 
 Do this process for each row $\xrightarrow[]{}$ it takes$$ \boxed{y_1+y_2+ \cdots +y_k=m} $$
 >>For instance,
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/78f39a14-e598-4dd4-b4e6-33b1d92c9143 width='' height='250'>
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/78f39a14-e598-4dd4-b4e6-33b1d92c9143 width='' height='250'>
 >>Thus, It should take time$$ \boxed{\Theta=(n+m)}  $$  
 
 >2.
@@ -116,7 +116,7 @@ $$ Thus,$$\Theta=(n+m)$$
 
 >3.
 >$$\boxed{Sketch}$$ 
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/d5dcb10d-a0ff-49a7-a14a-a24aeb461d82 width='' height='600'> 
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/d5dcb10d-a0ff-49a7-a14a-a24aeb461d82 width='' height='600'> 
   
 
 
@@ -126,7 +126,7 @@ $$ Thus,$$\Theta=(n+m)$$
 >>if w is reachable from v and seen(v) < seen(w) then w is a descendant of v in the DFS forest. See Theorem 5.5 in [1] for terminology.
 
 >Explanation
-><img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/dd7dfb32-1d87-4d7e-8275-5642e047db1a width='' height=''> 
+><img src=https://github.com/offsaying/OS_Mars/assets/120654757/dd7dfb32-1d87-4d7e-8275-5642e047db1a width='' height=''> 
 Suppose we perform a DFS on this graph starting from node A, and we number the nodes according to their discovery times.
 >>suppose we choose node B as v and node E as w. Node E is reachable from node B, and seen(B) = 2 < seen(E) = 5. However, node E is not a descendant of node B in the DFS tree, as there is no path from node B to node E in the DFS tree.
 
@@ -168,10 +168,10 @@ Thus for instance, 2-cube would be,$$00\; 01 \\10\; 11$$ We can define two subse
 >: `python Prog_1.py`
 
 >Driver code:
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/a6138d06-5020-4c4b-bc72-378c00241cad width='' height='130'> 
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/a6138d06-5020-4c4b-bc72-378c00241cad width='' height='130'> 
 
 >Output:
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/d4c630bc-92cb-4cad-b37e-aae63dccb6c5 width='' height='100'> 
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/d4c630bc-92cb-4cad-b37e-aae63dccb6c5 width='' height='100'> 
 
 
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Program 2</p>
@@ -179,10 +179,10 @@ Thus for instance, 2-cube would be,$$00\; 01 \\10\; 11$$ We can define two subse
 >: `python Prog_2.py`
 
 >Driver code:
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/91ab5d0d-36b6-4e39-878f-dbd35aa8aa78 width='' height='150'> 
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/91ab5d0d-36b6-4e39-878f-dbd35aa8aa78 width='' height='150'> 
 
 >Output:
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/00ac24ce-4599-41e7-8a2f-6aa109d3ad7f width='' height='120'> 
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/00ac24ce-4599-41e7-8a2f-6aa109d3ad7f width='' height='120'> 
 
 
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Program 3</p>
@@ -190,10 +190,10 @@ Thus for instance, 2-cube would be,$$00\; 01 \\10\; 11$$ We can define two subse
 >: `python Prog_3.py`
 
 >Driver code:
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/d8b9d205-4ce3-4201-accc-98220dddd318 width='' height='150'> 
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/d8b9d205-4ce3-4201-accc-98220dddd318 width='' height='150'> 
 
 >Output:
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/fdb9c3b5-153c-4977-96ec-4909a1c5b5c9 width='' height='120'>
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/fdb9c3b5-153c-4977-96ec-4909a1c5b5c9 width='' height='120'>
 
 
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:600;font-weight:1;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Program 4</p>
@@ -201,10 +201,10 @@ Thus for instance, 2-cube would be,$$00\; 01 \\10\; 11$$ We can define two subse
 >: `python Prog_4.py`
 
 >Driver Code:
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/657871a4-118e-4234-b46f-73b8ebc3546c width='' height='150'> 
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/657871a4-118e-4234-b46f-73b8ebc3546c width='' height='150'> 
 
 >Output:
-<img src=https://github.com/FerneyChen/OS_Mars/assets/120654757/6d7f708f-5072-4540-af01-5b1fc8bee9a6 width='' height='90'> 
+<img src=https://github.com/offsaying/OS_Mars/assets/120654757/6d7f708f-5072-4540-af01-5b1fc8bee9a6 width='' height='90'> 
 
 >The advantage(when too big to hold in memory):
 >>It can be implemented in a memory-efficient way, without requiring the entire graph to be loaded into memory 
