@@ -41,18 +41,69 @@ TFAE:
 >
 >>Properties
 >
->>$\int_{a}^{a}f(x)dx=0123 $ 
+>>1. $\int_{a}^{a}f(x)dx=0 $ 
 >
->>$\int_{a}^{b}f(x) dx=-\int_{b}^{a}f(x) dx$ 
+>>2. $\int_{a}^{b}f(x) dx=-\int_{b}^{a}f(x) dx$ 
 >
->>$\int_{a}^{b}f(x) dx=\int_{a}^{c}f(x) dx+\int_{c}^{b}f(x) dx,c\in (a,b) $ 
+>>3. $\int_{a}^{b}f(x) dx=\int_{a}^{c}f(x) dx+\int_{c}^{b}f(x) dx,c\in (a,b) $ 
 >
->>Linearity
+>>4. Linearity
 >$\int_{a}^{b} \alpha f+\beta g=\alpha \int_{a}^{b}f+\beta \int_{a}^{b}g\;\; \;\; \alpha, \beta \in \mathbb{R}$ 
 >
->>If f is integrable on [a,b], g is $ \boxed{continuous}$ on f([a,b]), $\xrightarrow[ ]{}$ $ \boxed{gof}$  is integrable on [a,b]   
+>>5. If f is integrable on [a,b], g is $ \boxed{continuous}$ on f([a,b]), $\xrightarrow[ ]{}$ $ \boxed{gof}$  is integrable on [a,b]   
 >
->>$\neq $ 
+>>6. f,g are integrable $\xrightarrow[ ]{}$ fg is integrable
+>
+>>7. if $m\leq f(x) \leq M$ on [a,b] $ \\
+\xrightarrow[ ]{}$ m(b-a)  $\leq \int_{a}^{b}f(x) dx\leq M(b-a) $ 
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 1</p>
+
+>Prove : if $ f $ is integrable and non-negative on [a,b]$ \\
+\xrightarrow[ ]{}\;\; \int_{a}^{b} f(x) dx \geq 0$  
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 2</p>
+>Prove: If f,g are integrable on [a,b] and $f(x) \leq g(x),\forall x\in \left[ a,b \right]\xrightarrow[ ]{}\int_{a}^{b}f(x) dx \leq \int_{a}^{b} g(x)dx $ 
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 3</p>
+>Show that if  f is integrable on [a,b] $ \\
+\xrightarrow[ ]{}\;\; \left| f \right| $ is also integrable on [a,b] and $ \\
+\left| \int_{a}^{b}f(x)dx\right|\leq \int_{a}^{b}\left| f(x) \right|  dx   $    
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>⭐Example 4</p>
+>Prove if f is continuous and non-negative on [a,b] and $f(x_{0})>0 \xrightarrow[ ]{} \int_{a}^{b}f(x) dx >0 $ 
+
+>definition of continuity:
+>
+>>f is continuous on $x_0\Longleftrightarrow  \\
+\forall \epsilon>0,\exists \delta >0,\left|x-x_{0}\right|<\delta \xrightarrow[ ]{}\left|f(x) -f(x_{0}) \right|<\epsilon $ 
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Exercise 5</p>
+>Let f be a continuous and non-negative function defined on [a,b]
+>
+>>Assume $f$  be  a continuous and non- negative function defined on [a,b] 
+>
+>>Assume $M=\underset{\underset{[a,b]}{\downarrow}}{\max\left\{ f(x)  \right\}} $ 
+Prove: $\lim\limits_{n\xrightarrow[ ]{}\infty}\left( \int_{a}^{b}f^{n}(x) dx    \right)^{\frac{1}{n}}=M $   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
