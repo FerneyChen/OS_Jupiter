@@ -11,7 +11,7 @@
 >
 >>$ \boxed{Type\;\; 2}$ 
 >
->>$\lim\limits_{c\xrightarrow[ ]{}a^{+}}\int_{c}^{b}f(x)dx\;\; \text{ or }\lim\limits_{\epsilon\xrightarrow[ ]{}a^{+}}\int_{a+\epsilon}^{b}f(x)dx$ 
+>>$\lim\limits_{c\xrightarrow[ ]{}a^{+}}\int_{c}^{b}f(x)dx\;\; \text{ or }\lim\limits_{\epsilon\xrightarrow[ ]{}0^{+}}\int_{a+\epsilon}^{b}f(x)dx$ 
 <div style='text-align: center;'><img src=https://github.com/Offsaying/OS_Mars/assets/120654757/feacaecc-caa2-49f4-a72b-ce5809bdc77f width='1000' height='150'></div> 
 
 
@@ -79,9 +79,145 @@ $\xrightarrow[ ]{}\int_{a}^{\infty}f(x)dx$ (absolutely) converges
 >
 >>c) $\int_{-2}^{2}\frac{dx}{\sqrt[ ]{4-x^{2}}}$ 
 
->$$\underline{\mathbf{Sol}}$$ a) $\int_{4}^{5}\frac{dx}{\sqrt[ ]{x-4}}=\lim\limits_{a\xrightarrow[ ]{}4^{+}}\int_{a}^{5}\frac{dx}{\sqrt[ ]{x-4}}=\lim\limits_{a\xrightarrow[ ]{}4^{+}}2\sqrt[ ]{x-4}\bigg|_{a}^{5}$ 
+>$$\underline{\mathbf{Sol}}$$ 
+>
+>>a) $\int_{4}^{5}\frac{dx}{\sqrt[ ]{x-4}}=\lim\limits_{a\xrightarrow[ ]{}4^{+}}\int_{a}^{5}\frac{dx}{\sqrt[ ]{x-4}}=\lim\limits_{a\xrightarrow[ ]{}4^{+}}2\sqrt[ ]{x-4}\bigg|_{a}^{5}$ 
 $=\lim\limits_{a\xrightarrow[ ]{}4^{+}}(2-2\sqrt[ ]{a-4})=2$ 
+>
+>>b) $\int_{-1}^{1}\frac{1}{x^{2}}dx$ 
+>
+>>🔴 $ \boxed{Wrong}$
+$\int_{-1}^{1}\frac{1}{x^{2}}dx=-\frac{1}{x}\bigg|_{-1}^{1}=-1-1=-2$
+>WHY? 
+$\because $ The integral cannot be negative! （面积！）
+$\because $ When $x\xrightarrow[ ]{}0$ something must be happened! 
+>
+>>🟢 $\boxed{Right}$
+$\int_{-1}^{1}\frac{1}{x^{2}}dx =\lim\limits_{\epsilon \xrightarrow[ ]{}0^{-}}\int_{-1}^{\epsilon}\frac{1}{x^{2}}dx+\lim\limits_{\epsilon\xrightarrow[ ]{}0^{+}}\int_{\epsilon}^{1}\frac{1}{x^{2}}dx$   
+>$=\lim\limits_{\epsilon\xrightarrow[ ]{}0^{-}}(-\frac{1}{x}\bigg|_{-1}^{\epsilon})+\lim\limits_{\epsilon\xrightarrow[ ]{}0^{+}}(-\frac{1}{x}\bigg|_{\epsilon}^{1})$
+$=\underbrace{\lim\limits_{\epsilon\xrightarrow[ ]{}0^{-}}(-\frac{1}{\epsilon}-1)}_{\infty} +\underbrace{\lim\limits_{\epsilon\xrightarrow[ ]{}0^{+}}(-1-\frac{1}{\epsilon})}_{\infty} $
+Thus, the integral diverges.
+>
+>>c) $\int_{-2}^{2}\frac{dx}{\sqrt[ ]{4-x^{2}}}$ 
+>
+>>Consider the anti-derivative first
+$\int_{-2}^{2}\frac{dx}{\sqrt[ ]{4-x^{2}}}=\int_{-2}^{2}\frac{dx}{2\sqrt[ ]{1-(\frac{x}{2})^{2}}}=\arcsin (\frac{x}{2})+\boxed{c} $ 
+>
+>>$\int_{-2}^{2}\frac{dx}{\sqrt[ ]{4-x^{2}}}=\lim\limits_{\epsilon\xrightarrow[ ]{}0^{+}}\int_{-2+\epsilon}^{2-\epsilon}\frac{dx}{\sqrt[ ]{4-x^{2}}}$
+$=\lim\limits_{\epsilon\xrightarrow[ ]{}0^{+}}(\underbrace{\arcsin \frac{2-\epsilon}{2}}_{\frac{\pi}{2}} -\underbrace{\arcsin \frac{-2+\epsilon}{2}}_{-\frac{\pi}{2}}) =\pi$ 
+>
+>>$(\int_{-2}^{2}\frac{dx}{\sqrt[ ]{4-x^{2}}}=\lim\limits_{\epsilon\xrightarrow[ ]{}0^{+}}\int_{-2+\epsilon}^{0}\frac{dx}{\sqrt[ ]{4-x^{2}}}+\lim\limits_{\epsilon\xrightarrow[ ]{}0^{+}}\int_{0}^{2-\epsilon}\frac{dx}{\sqrt[ ]{4-x^{2}}})$ 
 
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 2</p>
+>Evaluate
+a) $\int_{0}^{\infty}e^{-x}dx$ 
+b) $\int_{1}^{\infty}\cos xdx$ 
+>$$\underline{\mathbf{Sol}}$$ 
+>
+>>a) $\int_{0}^{\infty}e^{-x}dx$
+$=\lim\limits_{b\xrightarrow[ ]{}\infty}\int_{0}^{b}e^{-x}dx$
+$=\lim\limits_{b\xrightarrow[ ]{}\infty}(-e^{-x})\bigg|_{0}^{b}$
+$=\lim\limits_{b\xrightarrow[ ]{}\infty}(\underbrace{-e^{-b}}_{0} +1)=1$ 
+>
+>>$=\lim\limits_{b\xrightarrow[ ]{}\infty}\int_{1}^{b}\cos xdx$ 
+$=\lim\limits_{b\xrightarrow[ ]{}\infty}\sin x\bigg|_{1}^{b}$ 
+$=\lim\limits_{b\xrightarrow[ ]{}\infty}(\sin b-\sin 1)$ 
+DNE $\because \sin b $ will oscillates between -1 and 1 
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 3</p>
+>Determine if each of the following integrals converges or diverges
+>
+>>$\int_{0}^{1}\frac{dx}{x^{2}+5x}$ 
+>$$\underline{\mathbf{Sol}}$$ 
+>
+>>$\boxed{Comparison?}$
+>
+>>Consider $\frac{1}{x^{2}+5x }\leq \frac{1}{x^{2}}$ but $\int_{0}^{1}\frac{1}{x^{2}}dx$ diverges  
+>
+>>$ \boxed{Ratio?}$ 
+>
+>>$f(x)=\frac{1}{x^{2}+5\times }$ 
+$\lim\limits_{x\xrightarrow[ ]{}0}\frac{f(x)}{g(x)?}=k$
+$0<k<\infty\xrightarrow[ ]{}\int_{}^{}f\;\; converges \Longleftrightarrow \int_{}^{}g\;\; converges$
+>
+>>near x=0,$x^{2}+5x\approx 5x$  consider $g(x)=\frac{1}{5x}$ 
+>
+>>$\lim\limits_{x\xrightarrow[ ]{}0}\frac{\frac{1}{x^{2}+5x }}{\frac{1}{5x}}=\lim\limits_{x\xrightarrow[ ]{}0}\frac{5x}{x^{2}+5x}=\lim\limits_{x\xrightarrow[ ]{}0}\frac{5}{x+5}=1=k$ 
+>
+>>$0<k<\infty\xrightarrow[ ]{}\int_{0}^{1}\frac{1}{x^{2}+5x}dx $ converges $\Longleftrightarrow \int_{0}^{1}\frac{1}{5x}dx$ converges   
+But $\int_{0}^{1}\frac{1}{5x}$ diverges $\xrightarrow[ ]{}\int_{0}^{1}\frac{dx}{x^{2}+5x}$ diverges  
+>
+>>($\int_{a>0}^{\infty}\frac{1}{x^{\alpha }}dx $ converges $\Longleftrightarrow \alpha >1$)
+($\int_{0}^{\alpha >0}\frac{1}{x^{\alpha }}dx$ converges $\Longleftrightarrow \alpha <1$)
+
+>$\int_{1}^{\infty}\frac{\cos x}{x^{2}}dx$ 
+>$$\underline{\mathbf{Sol}}$$ 
+>
+>>$ \boxed{Absolute\;\; Converges?}$ 
+>
+>>Consider if $\int_{1}^{\infty}\left| \frac{\cos x}{x^{2}}\right|dx $ converges  
+$ \boxed{Comparison}$ :$\left| \frac{\cos x}{x^{2}}\right|\leq \frac{1}{x^{2}}$ 
+$\because \int_{1}^{\infty}\frac{1}{x^{2}}dx$ converges $\xrightarrow[ ]{}$ $\int_{1}^{\infty}\left| \frac{\cos x}{x^{2}}\right|dx$ converges    
+$\because \int_{1}^{\infty}\left| \frac{\cos x}{x^{2}}\right|$ converges $\xrightarrow[ ]{}\int_{1}^{\infty}\frac{\cos x}{x^{2}}$ converges   
+
+>$\int_{0}^{1} \frac{\sin x}{x}dx$ 
+>
+>>$\frac{\sin x}{x} \geq 0,\;\; x\in (0,1]$ 
+>
+>>Consider for x near 0,
+$\because \underbrace{x\geq \sin x}_{*} \xrightarrow[ ]{}\frac{\sin x}{x}\leq \frac{x}{x}=1$ 
+$\because \int_{0}^{1}1dx=1$ converges $\xrightarrow[ ]{}\int_{0}^{1} \frac{\sin x}{x}$ converges   
+>
+>>$*:Let\;\; g(x)=x-\sin x,g(0)=0,g'(x)=1-\cos x\geq 0$
+$\xrightarrow[ ]{}g(x)\geq 0\xrightarrow[ ]{}x\geq \sin x$ 
+>
+>>$ \boxed{Remark}$ 
+>
+>>$\lim\limits_{x\xrightarrow[ ]{}0}\frac{\sin x}{x}=1$ 
+>
+>>$\int_{0}^{1} \frac{\sin x}{x}dx$ is not an improper integral 
+
+>$\int_{1}^{\infty}\frac{\sin x}{x} dx=\lim\limits_{b\xrightarrow[ ]{}\infty}\int_{1}^{b} \frac{\sin x}{x}dx$  
+>
+>>$\int_{1}^{b} \frac{\sin x}{x}dx=\frac{-\cos x}{x}\bigg|_{1}^{b}-\int_{1}^{b} \frac{\cos x}{x^{2}}dx$ 
+$u=\frac{1}{x}\;\; \;\; v'=\sin x  \\
+u'=-\frac{1}{x^{2}}\;\; \;\; v=-\cos x$ 
+>
+>>$\int_{1}^{\infty}\frac{\sin x}{x}dx =\lim\limits_{b\xrightarrow[ ]{}\infty}(\underbrace{\frac{-\cos x}{x}\bigg|_{1}^{b}}_{\cos 1} -\underbrace{\int_{1}^{b} \frac{\cos x}{x^{2}}dx}_{\text{ Converges by Previous }} ) $ 
+$\xrightarrow[ ]{}\int_{1}^{\infty}\frac{\sin x}{x}dx $ Converges
+>
+>>$ \boxed{Method_2:Dirichlet}$ 
+>
+>>$\int_{1}^{\infty}\frac{\sin x}{x}dx $ 
+>
+>>$f=\sin x\;\; g=\frac{1}{x}\;\; g'=-\frac{1}{x^{2}}$ 
+>
+>>$F(x)=\int_{1}^{x} \sin t\;dt$
+$=-\cos t\bigg|_{1}^{x}=-\cos x+\cos 1$ is bounded 
+>
+>>$ g $ is differentiable 
+>
+>>$\int_{1}^{\infty}\left| g'\right|dx=\int_{1}^{\infty}\frac{1}{x^{2}}dx     $ converges and $\lim\limits_{x\xrightarrow[ ]{}\infty}\frac{1}{x}=0$  
+Thus,$$\int_{1}^{\infty}\frac{\sin      x }{x}dx $$converges. 
+
+>$\int_{0}^{5} \frac{1}{\sqrt[ 3]{7x+2x^{4}}}dx$ 
+>
+>>$ \boxed{Ratio}$ 
+>
+>>$\lim\limits_{x\xrightarrow[ ]{}0}\frac{f(x)}{g(x)?}=k$ 
+>
+>>near x=0 :$7x+2x^{4}\approx 7x$ 
+consider $g(x)=\frac{1}{\sqrt[ 3]{7x}}$ 
+>
+>>$\lim\limits_{x\xrightarrow[ ]{}0^{+}}\frac{\frac{1}{\sqrt[ 3]{7x+2x^{4}}}}{\frac{1}{\sqrt[ 3]{7x}}}=\lim\limits_{x\xrightarrow[ ]{}0^{+}}\sqrt[3 ]{\frac{7x}{7x+2x^{4}}}=\lim\limits_{x\xrightarrow[ ]{}0^{+}}\sqrt[ 3]{\frac{1}{1+\frac{2}{7}x^{3}}}=1=k$ 
+>
+>>$0<k<\infty\xrightarrow[ ]{}\int_{0}^{5} \frac{1}{\sqrt[3]{7x+2x^{4}}}dx  $ converges $\Longleftrightarrow  \int_{0}^{5} \frac{1}{\sqrt[ 3]{7x}}dx$ converges 
+>
+>>$\int_{0}^{5} \frac{1}{\sqrt[ 3]{7}\sqrt[ 3]{x}}dx$ converges $\because \alpha <1 (Type\;\; 2)$    
+>
+>>$\xrightarrow[ ]{}\int_{0}^{5} \frac{1}{\sqrt[ 3]{7x+2x^{4}}}dx$ converges. 
 
 
 [![](https://img.shields.io/badge/Yu%20Chen-chen11976%40gtiit.edu.cn-%2300FFFF)](chen11976@gtiit.edu.cn) [![](https://img.shields.io/badge/Code%20in-Latex%20--%20Katex-%23ffd700)]()  [![](https://img.shields.io/badge/Yu%20Chen-Home-%09%234169E1)](https://offsaying.github.io) [![](https://img.shields.io/badge/Mozilla%20Public%20License-2.0-rgb(27%2C181%2C214))](https://www.mozilla.org/en-US/MPL/2.0/)
