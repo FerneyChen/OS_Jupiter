@@ -32,11 +32,11 @@ f,g are continuous. $f,g\geq 0$
 >>Type 1 
 >
 >>$\lim\limits_{x\xrightarrow[ ]{}\infty}\frac{f(x)}{g(x)}=k$ 
-$\begin{cases}
+$
    \boxed{0<k<\infty} \xrightarrow[ ]{}\int_{c}^{\infty}fdx\;\; \text{ converges }\Longleftrightarrow \int_{c}^{\infty}gdx \text{ converges }  \\
  \boxed{k=0\text{ and }\int_{c}^{\infty}gdx\;\; \text{ converges }} \xrightarrow[ ]{} \int_{c}^{\infty}fdx\;\; \text{ converges }  \\
  \boxed{k=\infty\text{ and }\int_{c}^{\infty}fdx\;\; \text{ converges }} \xrightarrow[ ]{}\int_{c}^{\infty}gdx \;\; \text{ converges }\\
-\end{cases}$ 
+$ 
 >
 >>Type 2
 >
@@ -218,6 +218,76 @@ consider $g(x)=\frac{1}{\sqrt[ 3]{7x}}$
 >>$\int_{0}^{5} \frac{1}{\sqrt[ 3]{7}\sqrt[ 3]{x}}dx$ converges $\because \alpha <1 (Type\;\; 2)$    
 >
 >>$\xrightarrow[ ]{}\int_{0}^{5} \frac{1}{\sqrt[ 3]{7x+2x^{4}}}dx$ converges. 
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 4</p>
+>For which value of $p,q\in \mathbb{R}^{+}$ the integral $\int_{0}^{\infty}\frac{dx}{x^{p}(1+x)^{q}} $ converges ? 
+>
+>>Two Problems:
+>
+>>1. $\int_{0}^{1}\frac{dx}{x^{p}(1+x)^{q}} $  
+>
+>>2. $\int_{1}^{\infty}\frac{dx}{x^{p}(1+x )^{q}} $ 
+
+>1. $\int_{0}^{1} \frac{dx}{x^{p}(1+x)^{q}}$ 
+>
+>>$ \boxed{Ratio}$ 
+>
+>>near 0 : $x^{p}(1+x)^{q}\approx x^{p}$ 
+>
+>>consider $g(x)=\frac{1}{x^{p}}$ 
+>
+>>$\lim\limits_{x\xrightarrow[ ]{}0^{+}}\frac{\frac{1}{x^{p}(1+x)^{q}}}{\frac{1}{x^{p}}}=\lim\limits_{x\xrightarrow[ ]{}0^{+}}\frac{1}{(1+x)^{q}}=1$ 
+>
+>>$\because 0<1<\infty$ 
+>
+>>$\int_{0}^{1} \frac{dx}{x^{p}(1+x)^{q}}$ converges $\Longleftrightarrow $ $\int_{0}^{1} \frac{dx}{x^{p}}$ converges 
+$\Longleftrightarrow p>1$     
+
+>2. $\int_{1}^{\infty}\frac{dx}{x^{p}(1+x)^{q}} $
+>
+>>$ \boxed{Ratio}$  
+>
+>>For very large x:
+$x^{p}(1+x)^{q}\approx x^{p}x^{q}=x^{p+q}$
+>
+>>Consider $g(x)=\frac{1}{x^{p+q}}$
+>
+>>$\lim\limits_{x\xrightarrow[ ]{}\infty}\frac{\frac{1}{x^{p}(1+x)^{q}}}{\frac{1}{x^{p+q}}}=\lim\limits_{x\xrightarrow[ ]{}\infty}\frac{x^{q}}{(1+x)^{q}}$ 
+$\lim\limits_{x\xrightarrow[ ]{}\infty}\frac{1}{(\frac{1}{x}+1)^{q}}=1$ 
+>
+>>$0<1<\infty$ 
+>
+>>$\int_{1}^{\infty}\frac{dx}{x^{p}(1+x)^{q}} $ converges 
+$\Longleftrightarrow \int_{1}^{\infty}\frac{1}{x^{p+q}}dx  $ converges   
+>
+>>$p+q>1$ 
+
+>Answer 
+>
+>>$p+q>1\;\; and\;\; p>1$ 
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example 5</p>
+>Let $f\geq 0$ be a continuous function on $[0,\infty)$ 
+Prove or disprove :  If$\int_{0}^{\infty}f(x)dx   $ converges 
+$\xrightarrow[ ]{}\lim\limits_{x\xrightarrow[ ]{}\infty}f(x )=0$  
+>$$\underline{\mathbf{Sol}}$$ 
+>
+>>Answer : False 
+counter example:<div style='text-align: center;'><img src=https://github.com/Offsaying/OS_Mars/assets/120654757/5a9cef57-bbf1-46e5-8fa3-cae6c8eccd45 width='1000' height=''></div> 
+>
+>>width of the base of each triangle $r_n=\frac{1}{2^{n-1}}$ 
+>
+>>$\int_{0}^{\infty}f(x)dx=\sum\limits_{n=1}^{\infty} \text{ Area of the triangles } $  
+$=\sum\limits_{n=1}^{\infty}\frac{1}{2}\frac{1}{2^{n-1}}\cdot 1$ 
+$=\sum\limits_{n=1}^{\infty}\frac{1}{2^{n}}=1$ 
+Thus, the integral converges but $\lim\limits_{x\xrightarrow[ ]{}\infty}f(x)\neq 0$ 
+>
+>>$ \boxed{Remark}$ 
+>
+>>What about the same but $f>0?$
+
 
 
 [![](https://img.shields.io/badge/Yu%20Chen-chen11976%40gtiit.edu.cn-%2300FFFF)](chen11976@gtiit.edu.cn) [![](https://img.shields.io/badge/Code%20in-Latex%20--%20Katex-%23ffd700)]()  [![](https://img.shields.io/badge/Yu%20Chen-Home-%09%234169E1)](https://offsaying.github.io) [![](https://img.shields.io/badge/Mozilla%20Public%20License-2.0-rgb(27%2C181%2C214))](https://www.mozilla.org/en-US/MPL/2.0/)
