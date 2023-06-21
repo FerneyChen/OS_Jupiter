@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
+    <!--=============== Page Process ========= -->
+    <script type="text/javascript" src="https://offsaying.github.io/OS_Mars/js/jquery.goup.min.js" defer></script>
+
+
     <!--=============== LOADING ===============-->
     <script src="https://offsaying.github.io/assets/js/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="https://offsaying.github.io/assets/css/loading.css">
@@ -1078,9 +1082,6 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
 <!-- =================================== END ========================================-->
 
 
-
-
-
 </main>
   <div class="search">
 <button id="btn-search-close" class="btn btn--search-close"><i class="ri-fingerprint-line"></i></button>
@@ -1097,6 +1098,8 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
 <noscript><style>.loaderbg {display: none;}</style></noscript>
 <script type="text/javascript">$(window).on('load',function(){$(".loaderbg").hide();});/*$(function () {setTimeout(function () {$(".loaderbg").hide();}, 6000);})*/</script>
 
+<!--=============== PAGE PROCESS ===============-->
+<script type="text/javascript" defer>$(document).ready(function () {$.goup({trigger: 100,bottomOffset: 50,locationOffset: 50,title: '0%',titleAsText: true});$(".goup-container").css("background", "#AC9EB8 none repeat scroll 0% 0%").css("opacity", 0.9);$(".goup-text").css("font-weight", 100).css("color", "#ffffff").css("opacity", 0.9);});$(document).scroll(function () {var d_h = $(document).height();var c_h = $(window).height();var c_t_h = $(window).scrollTop();var schedule = c_t_h / (d_h - c_h - 0.5);var str ="进度:" +Number(schedule * 100).toFixed()+"";$(".goup-text").text(str);});</script>
 
 <!--=============== MAIN JS ===============-->
 <script src="https://offsaying.github.io/assets/js/Main_YUCHEN.js"></script>
