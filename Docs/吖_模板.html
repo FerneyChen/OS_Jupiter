@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="https://offsaying.com/img/TinyApple.png" type="image/x-icon">
+
+    <!--=============== TOC ============== -->
+    <script src="https://offsaying.com/OS_Mars/js/jquery-3.6.0.min.js"></script>
+    <script src="https://offsaying.com/OS_Mars/js/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://offsaying.com/OS_Mars/css/tocbot.css">
+
+    <!--=============== Page Process ========= -->
+    <script type="text/javascript" src="https://offsaying.com/OS_Mars/js/jquery.goup.min.js" defer></script>
+
     <!--=============== LOADING ===============-->
     <script src="https://offsaying.com/assets/js/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="https://offsaying.com/assets/css/loading.css">
@@ -14,16 +25,6 @@
 		<link rel="stylesheet" type="text/css" href="https://offsaying.com/assets/css/style8_YUCHEN.css" />
 		<script>document.documentElement.className = 'js';</script>
 
-    <!--=============== Page Process ========= -->
-    <script type="text/javascript" src="https://offsaying.com/OS_Mars/js/jquery.goup.min.js" defer></script>
-
-
-    <!--=============== FAVICON ===============-->
-    <link
-      rel="shortcut icon"
-      href="https://github.com/offsaying/OS_Mars/assets/120654757/c75d453a-e72c-4ba4-a35b-3496a96be283"
-      type="image/x-icon"
-    />
 
     <!--=============== REMIXICONS ===============-->
     <link
@@ -34,6 +35,12 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="https://offsaying.com/OS_Jupiter/Docs/katex.min.css">
     <link rel="stylesheet" href="https://offsaying.com/assets/css/styles_YUCHEN.css" />
+
+
+    <!-- ============== BATTERY ===============-->
+    <link rel="stylesheet" href="https://offsaying.com/OS_Mars/css/battery.css">
+    
+    
     <title></title> <!--此处修改网页标题-->
   </head>
   
@@ -50,9 +57,11 @@
       </nav>
     </header>
 
-
+    <div class="content">
 <!-- =================================== START ========================================-->
       
+  
+        
   
  
 
@@ -60,7 +69,11 @@
 <!-- =================================== END ========================================-->
 
 
-
+<!--=============== TOC ===============-->
+<div class="toc"></div>
+<!--=============== BATTERY ===============-->
+<section class="battery"><div class="battery__card" style="font-family: Poppins;"><div class="battery__data"><p class="battery__text">Battery</p><h7 class="battery__percentage">20%</h7><p class="battery__status">Low battery <i class="ri-plug-line"></i></p></div><div class="battery__pill"><div class="battery__level"><div class="battery__liquid"></div></div></div></div></section>
+        
 
 
 </main>
@@ -74,17 +87,19 @@
 <script src="https://offsaying.com/OS_Mars/js/disabled.js"></script><!--禁用-->
 <script src="https://offsaying.com/assets/js/demo8_YUCHEN.js"></script>
 <script type="text/javascript" src="https://offsaying.com/OS_Jupiter/Docs/searcher.js"></script>
-
+<script src="https://offsaying.com/OS_Mars/js/toc.js"></script> <!--TOC-->
+<script src="https://offsaying.com/OS_Mars/js/Battery.js"></script><!--Battery-->
 <!--=============== LOADING ===============-->
 <noscript><style>.loaderbg {display: none;}</style></noscript>
 <script type="text/javascript">$(window).on('load',function(){$(".loaderbg").hide();});/*$(function () {setTimeout(function () {$(".loaderbg").hide();}, 6000);})*/</script>
 
-
 <!--=============== PAGE PROCESS ===============-->
-<script type="text/javascript" defer>$(document).ready(function () {$.goup({trigger: 100,bottomOffset: 50,locationOffset: 50,title: '0%',titleAsText: true});$(".goup-container").css("background", "#AC9EB8 none repeat scroll 0% 0%").css("opacity", 0.9);$(".goup-text").css("font-weight", 100).css("color", "#ffffff").css("opacity", 0.9);});$(document).scroll(function () {var d_h = $(document).height();var c_h = $(window).height();var c_t_h = $(window).scrollTop();var schedule = c_t_h / (d_h - c_h - 0.5);var str ="%" +Number(schedule * 100).toFixed()+"";$(".goup-text").text(str);});</script>
+<script type="text/javascript" defer>$(document).ready(function () {$.goup({trigger: 100,bottomOffset: 50,locationOffset: 50,title: '0%',titleAsText: true});$(".goup-container").css("background", "#696969 none repeat scroll 0% 0%").css("opacity", 0.9);$(".goup-text").css("font-family", "Poppins").css("font-weight", 100).css("color", "#ffffff").css("opacity", 0.9);});$(document).scroll(function () {var d_h = $(document).height();var c_h = $(window).height();var c_t_h = $(window).scrollTop();var schedule = c_t_h / (d_h - c_h - 0.5);var str =Number(schedule * 100).toFixed()+"%";$(".goup-text").text(str);});</script>
 
+<!--=============== 2D 板娘 ==================-->
+<script src="https://offsaying.com/OS_Mars/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"https://offsaying.com/live2dw/","pluginJsPath":"https://offsaying.com/lib/","pluginModelPath":"https://offsaying.com/assets/","tagMode":false,"debug":false,"model":{"jsonPath":"https://offsaying.com/OS_Mars/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 
 <!--=============== MAIN JS ===============-->
 <script src="https://offsaying.com/assets/js/Main_YUCHEN.js"></script>
-</body>
+</body> 
 </html>
