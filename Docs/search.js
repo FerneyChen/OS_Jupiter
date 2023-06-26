@@ -42,14 +42,12 @@ function searchtext() {
     resultcount = 0;
     resultstr = '';
     var resulttitlecache = new Array()
-    if (obj.length > 1){
     for (i = 0; i < obj.length; i++) {
         if (obj[i]['title'].includes(input.value) == true) {
             resulttitlecache.unshift(obj[i]['title'])
             resultcount++;
         }
     }
-}
 
     // 标题搜索结果展示
     if (resultcount !== 0 && resultcount !== obj.length) {
