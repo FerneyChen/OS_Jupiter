@@ -9,7 +9,7 @@
 
 ## <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#00cc8f;vertical-align:middle;padding:0px;margin-top:0px'>Example</p>
 
->a)
+>a) 
 $\lim\limits_{(x,y)\xrightarrow[ ]{}(0,0)}\frac{x^{2}+x^{3}+y^{5}}{x^{2}+y^{2}}$ 
 >
 >>Using $ \boxed{Parts}$ 
