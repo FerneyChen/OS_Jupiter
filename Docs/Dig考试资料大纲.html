@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="https://offsaying.com/img/TinyApple.png" type="image/x-icon">
+
+    <!--=============== TOC ============== -->
+    <script src="https://offsaying.com/OS_Mars/js/jquery-3.6.0.min.js"></script>
+    <script src="https://offsaying.com/OS_Mars/js/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://offsaying.com/OS_Mars/css/tocbot.css">
+
+    <!--=============== Page Process ========= -->
+    <script type="text/javascript" src="https://offsaying.com/OS_Mars/js/jquery.goup.min.js" defer></script>
+
+    <!--=============== LOADING ===============-->
+    <script src="https://offsaying.com/assets/js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://offsaying.com/assets/css/loading.css">
+
+    <div class="loaderbg"><h5 class="loading">Loading<div class="loading__dots"><span class="loading__dot"></span><span class="loading__dot"></span><span class="loading__dot"></span><span class="loading__dot"><span class="loading__dot-down"></span></span></div></h5><script src="https://offsaying.com/assets/js/loading_main.js"></script></div>
+
+    <link rel="stylesheet" type="text/css" href="https://offsaying.com/assets/css/demo_YUCHEN.css" />
+		<link rel="stylesheet" type="text/css" href="https://offsaying.com/assets/css/style8_YUCHEN.css" />
+		<script>document.documentElement.className = 'js';</script>
+
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="https://offsaying.com/OS_Jupiter/Docs/katex.min.css">
+    <link rel="stylesheet" href="https://offsaying.com/assets/css/styles_YUCHEN.css">
+
+
+    <!-- ============== BATTERY ===============-->
+    <link rel="stylesheet" href="https://offsaying.com/OS_Mars/css/battery.css">
+    
+    
+    <title></title> <!--此处修改网页标题-->
+  </head>
+  
+  	<body class="demo-8">
+		<main class="main-wrap">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header" style="background-color: white;">
+      <nav class="nav container">
+        <a href="https://offsaying.com" class="nav__logo" style="font-family: Poppins;color:black;font-weight: bold;">&nbsp;<i class="ri-apple-fill" ></i> Blog<span></span> </a>
+        <div class="btn btn--search" >    
+          <a id="btn-search" style="position: relative; left:37%;">
+            <img src="https://github.com/Offsaying/OS_Mars/assets/120654757/aad6e1b7-2f1e-4ed9-bef5-4137bf7c2486" width="170" >
+          </a>
+        </div>
+        
+      </nav>
+    </header>
+
+    <div class="content">
+<!-- =================================== START ========================================-->
+      
+ 
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#ccc;background-color:#141414;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#fff}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#a3a3a3}html body strong{color:#fff}html body del{color:#a3a3a3}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#a3a3a3;background-color:#282828;border-left:4px solid #3d3d3d}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#3d3d3d;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#fff}html body table td,html body table th{border:1px solid #3d3d3d;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#fff;background-color:#282828;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#3d3d3d;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#fff;border:1px solid #3d3d3d;border-bottom:2px solid #2e2e2e;padding:2px 4px;background-color:#282828;border-radius:3px}@media print{html body{background-color:#141414}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#fff;page-break-after:avoid}html body blockquote{color:#a3a3a3}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+html body {
+  font-family: Monaco;
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+  background-image: url("https://github.com/Offsaying/OS_Mars/assets/120654757/1e47efe3-dbdf-4ee5-b8f8-0d6c3281b401");
+  overflow: initial;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+html body > :first-child {
+  margin-top: 0;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  line-height: 1.2;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  color: black;
+}
+html body h1 {
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 0.3em;
+}
+html body h2 {
+  font-size: 1.75em;
+  /*padding-bottom: .3em;*/
+  border-bottom: 1px solid #bfbfbf;
+  text-align: center;
+}
+html body h3 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #bfbfbf;
+}
+html body h4 {
+  font-size: 1.25em;
+}
+html body h5 {
+  font-size: 1.1em;
+}
+html body h6 {
+  font-size: 1em;
+}
+html body h5 {
+  font-size: 1em;
+}
+html body h6 {
+  color: #90a3a9;
+}
+html body strong {
+  color: black;
+}
+html body del {
+  color: #90a3a9;
+}
+html body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+html body a {
+  color: #afeeee;
+  text-decoration: none;
+}
+html body a:hover {
+  color: #afeeee;
+  text-decoration: underline;
+}
+html body img {
+  max-width: 100%;
+}
+html body > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+}
+html body > ul,
+html body > ol {
+  margin-bottom: 16px;
+}
+html body ul,
+html body ol {
+  padding-left: 2em;
+}
+html body ul.no-list,
+html body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+html body ul ul,
+html body ul ol,
+html body ol ol,
+html body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+html body li {
+  margin-bottom: 0;
+}
+html body li.task-list-item {
+  list-style: none;
+}
+html body li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+html body .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.8em;
+  vertical-align: middle;
+}
+html body .task-list-item-checkbox:hover {
+  cursor: pointer;
+}
+html body blockquote {
+  border-right: #1e2427;
+  margin: 16px 0;
+  font-size: inherit;
+  padding-top: 5px;
+  padding-bottom: 5px ;
+  padding-left: 15px;
+  color: black;
+  background-color: #F6F6EA;
+  border-left: 0px solid #0f0f0f;
+  border-bottom: 1px solid #0f0f0f;
+}
+html body blockquote > :first-child {
+  margin-top: 0;
+}
+html body blockquote > :last-child {
+  border-bottom: 0px;
+  margin-bottom: 0;
+}
+html body hr {
+  height: 4px;
+  margin: 32px 0;
+  background-color: bal;
+  border: 0 none;
+}
+html body table {
+  color: black;
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+html body table th {
+  color: black;
+  font-weight: normal;
+}
+html body table td,
+html body table th {
+  font-family: Monaco;
+  border: 2px solid #afeeee;
+  background-color: #DFDED6;
+  padding: 0px 10px;
+}
+html body dl {
+  padding: 0;
+}
+html body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+html body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+html body code {
+  font-family: Monaco;
+  font-size: 0.85em !important;
+  color: #1e2427;
+  background-color: #afeeee;
+  border-radius: 3px;
+  padding: 0.2em 0;
+}
+html body code::before,
+html body code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+html body pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 0.85em !important;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+html body .highlight {
+  margin-bottom: 16px;
+}
+html body .highlight pre,
+html body pre {
+  padding: 1em;
+  overflow: auto;
+  font-size: 0.85em !important;
+  line-height: 1.45;
+  border: #afeeee;
+  border-radius: 3px;
+}
+html body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+html body pre code,
+html body pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+html body pre code:before,
+html body pre tt:before,
+html body pre code:after,
+html body pre tt:after {
+  content: normal;
+}
+html body p,
+html body blockquote,
+html body ul,
+html body ol,
+html body dl,
+html body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+html body kbd {
+  color: black;
+  border: 1px solid #afeeee;
+  border-bottom: 2px solid #afeeee;
+  padding: 2px 4px;
+  background-color: #afeeee;
+  border-radius: 3px;
+}
+@media print {
+  html body {
+    background-image: url("https://github.com/Offsaying/OS_Mars/assets/120654757/1e47efe3-dbdf-4ee5-b8f8-0d6c3281b401");
+  }
+}
+
+      </style>
+    </head>
+    <body for="html-export" >
+      <div class="mume markdown-preview  "  >
+      <h1 class="mume-header undefined" id="p-styletext-aligncenterfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding20pxmargin-top60pxppt-22-in-totalp"><p style="text-align:center;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:20px;margin-top:60px">PPT (22 in total)</p></h1>
+
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px1-introductionp"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">1. Introduction</p></h5>
+
+<blockquote>
+<blockquote>
+<ol>
+<li>A brief description of the course</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>The User to Circuits stack</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>An introduction to the Von Neumann architecture and the Fetch-Decode-Execute cycle</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Why use binary (issues with using mechanical parts or analogical signals discretized into more than two values)</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>What we can do with two values (a bit)</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>What data we can represent (a brief introduction)</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="7">
+<li>Switching functions (functions that take n binary inputs and return m binary output)</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px2-transistors-and-logic-gatesfilep"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">2. Transistors and Logic gatesFile</p></h5>
+
+<blockquote>
+<blockquote>
+<p>A very basic introduction to electricity; Transistors; Logic gates<br>
+Topics explored:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief summary of the previous class</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>An introduction to electricity (Current, Voltage, Power)</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Transistors</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Building Logic Gates with transistors</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Representing a bit using Logic Gates (SR-Latch and D-Latch)</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Functional Completeness (and why we shouldn&apos;t build logic gates based on only one boolean operator)</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px3-tutorial-1p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">3. Tutorial 1</p></h5>
+
+<blockquote>
+<blockquote>
+<p>The first tutorial covering exercises from the first two lectures.<br>
+The topics included in this tutorial are:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief review of the first two lectures.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Data representation exercises.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Adding and substracting exercises.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>How to multiply and divide by two using shift.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>The Russian Peasent algorithm to multiply two unsigned numbers.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Circuits and truth tables exercises (these were only shown, and will be left for next lecture).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="7">
+<li>Boolean Algebra Axioms.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="8">
+<li>Circuits: getting the formula that represents a circuit and simplifying a circuit (these were only shown, and will be left for next lecture).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="9">
+<li>Transistors, getting the logic gate or circuit represented by an electrical diagram. (these were only shown, and will be left for next lecture).</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px4-alup"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">4. ALU</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we discusses some excercises we missed from the tutorial; we also discussed about how to construct an ALU.<br>
+The topics covered in this lecture are:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>Execercises missed from the last tutorial.</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>2.Bit and byte representation with a D-Latch.</p>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Memory types (SISO, PISO, SIPO, PIPO).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Making a counter using a clock and several D-Latches in sequence.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>How to build logical operators (AND, OR, XOR, etc) in an ALU of 4 bits.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Half Adder.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="7">
+<li>Full Adder.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="8">
+<li>Building the ADD operator in an ALU of 4 bits.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px5-subtraction-and-multiplicationp"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">5. Subtraction and multiplication</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this lecture we saw these topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief summary of previous class.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>A substraction algorithm at the ALU level..</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>A multiplication algorithm at the ALU level.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px6-tutorial-2p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">6. Tutorial 2</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this tutorial we made exercises comprising these topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>Multiplication using the Russian Peasant algorithm.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Multiplication using the ALU algorithm (positive numbers).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Multiplying using the ALU algorithm (negative numbers).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Circuits and logic formulas.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Division algorithm using the ALU (introduction).</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px7-mult-booth-division-and-combinatorial-circuitsp"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">7. Mult Booth, Division, and Combinatorial Circuits</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief summary of the previous class, including a step by step algorithm to multiply positive and negative numbers using the ALU.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Booth representation and multiplication algorithm.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Division algorithm used by the ALU, and a step by step description.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Boolean logic.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Minterm and Maxterm.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Circuit drawing was left for the next class.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px8-bubble-pushing-karnaugh-maps-and-sequential-logicp"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">8. Bubble Pushing, Karnaugh Maps, and Sequential Logic</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief review of previous class.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Using the Bubble Pushing technique to simplify circuits.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>An introduction to Karnaugh Maps to simplify logic formulas (we only saw the simpler version of these maps).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Sequential Logic, a brief introduction and the notions of synchronous and asynchronous circuits.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px9-tutorial-3p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">9. Tutorial 3</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief review of previous class.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Registers.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Enabled Flip-Flop.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Resettable Flip-Flops</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Race conditions.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Synchronous Sequential Circuits.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px10-tutorial-4p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">10. Tutorial 4</p></h5>
+
+<blockquote>
+<blockquote>
+<p>Tutorial 4, in this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>Bubble pushing and Karnaugh Maps, simplifying circuits.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Synchronous sequential circuits.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Multiplication and Division.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Moore and Mealy state machines.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px11-floating-point-representation-and-operationsp"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">11. Floating Point, representation and operations</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>Errata of integer multiplication algorithm (carry starts with 0).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Integer multiplication and division (exercises from last tutorial).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Moore and Mealy machines (exercises from last tutorial).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Real numbers, how to represent them.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Fixed point representation.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Floating point representation.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="7">
+<li>Additions/Subtraction and Multiplication/Division on &gt;</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="8">
+<li>floating point numbers.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px12-error-correction-and-detection---part-1p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">12. Error correction and detection - Part 1</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief review of previous class, specifically fixed and floating point.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Error correction and detection by redundancy (N-Majority).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Parity bit (odd and even parity).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Parity interleaving.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Checksum.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Cyclic Redundancy Check (CRC).</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px13-error-correction-and-detection---part-2p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">13. Error correction and detection - Part 2</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief recap of previous class.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Data and valid words.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Hamming distance for words and code.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Hamming code.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Convolution algorithms.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Solomon-Reed algorithm.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px14-introduction-to-assembly---part-1p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">14. Introduction to Assembly - Part 1</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we started with an introduction to assembly with the following topics</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>The path between an executable program down to system functions.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>How a process is mapped into memory</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>The stack (Stacks frames composition)</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Values, memory, and registers</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Basic operators: moving data, logical, and arithmetical operators</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px15-introduction-to-assembly---part-2p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">15. Introduction to Assembly - Part 2</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we continued with an introduction to assembly with the following topic</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>How to translate control-flow statements (if-then-else, while, for, and do-while) into using only if-then and goto.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>The main components of a function and how these related to registers and the stack.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>A simple assembly demo (attached as a separate file).</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px16-microcodep"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">16. Microcode</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:&gt;</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief review on assembly.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>A brief review on the Vonn Neumann architecture.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>A last demo on assembly.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Implementing assembly instructions, hardwired vs microprogrammed CPUs</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>An intro to CPUSim.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px17-cpusim-and-pipelinep"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">17. CPUSim and Pipeline</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief summary of previous class.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>The Fetch-Decode-Execute steps in more detailed.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Introduced Program Counter, Instruction Register, Memory Address Register, and Memory Data Register, and how each of these registers are used for the Fetch-Decode-Execute steps.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Reviewed again the differences between CISC and RISC architectures.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Showed a demo of CPUSim, the tool we will use to work on microcode.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Pipeline is also a topic on these slides but time run out so we didn&apos;t manage to see it during class (left for next class).</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px18-pipeline-and-memoryp"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">18. Pipeline and memory</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A brief summary of previous class.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>We again saw in detail the Fetch-Decode-Execute steps.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Pipeline, how the sub-steps on the Fetch-Decode-Execute cycle can be executed in parallel, and what problems arise when doing it.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Memory:<br>
+a) Random Access Memory, having all words consecutively and using a memory array.<br>
+b) Static Random Access Memory and Dynamic Random Access Memory.<br>
+c) RAM vs ROM (Read Only Memory).</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px19-cachep"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">19. Cache</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we saw the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A review of previous class.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Cache, what it is and three ways of managing it:<br>
+a) Direct Mapping<br>
+b) Full Associative<br>
+c) Set-Associative</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px20-virtual-memory---cache---cpusim-revisitedp"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">20. Virtual Memory - Cache - CPUSim revisited</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we covered the following topics:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>A review on Cache.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Virtual Memory.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Started a revisit on assembly topics that will be required to use CPUSim.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px21-course-integration-part-1p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">21. Course Integration Part 1</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we started to integrate several topics seen during the course:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>The compilation phases (Preprocessing, compilation, assembling, linking).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Executing code, starting with assembly, going through the fetch-decode-execute cycle.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>How to get the instruction from memory (Virtual -&gt; Physical -&gt; Cache).</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0px22-course-integration-part-2p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">22. Course Integration Part 2</p></h5>
+
+<blockquote>
+<blockquote>
+<p>In this class we continued to integrate several topics seen during the course:</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>From Virtual Memory to Cache.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>How RAM is constructed (2D, 3D, down to flip-flops).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>The ALU, how to subtract.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>Transistors, nMos, pMos, and cMos.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0pxmemory-summaryp"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">Memory Summary</p></h5>
+
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0pxass-123p"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">Ass 1,2,3</p></h5>
+
+<h5 class="mume-header" id="p-styletext-aligncenterfont-size19pxfont-familyverdanafont-weight1000background-colorafeeeevertical-alignmiddlepadding0pxmargin-top0pxsome-theoretical-questionsp"><p style="text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px">Some theoretical questions</p></h5>
+
+
+      </div>
+      
+      
+    </body>
+    
+    
+    
+    
+    
+    
+    
+  </html> 
+  
+       
+<!-- =================================== END ========================================-->
+
+
+<!--=============== TOC ===============-->
+<div class="toc"></div>
+<!--=============== BATTERY ===============-->
+<section class="battery"><div class="battery__card" style="font-family: Poppins;"><div class="battery__data"><p class="battery__text">Battery</p><h7 class="battery__percentage">20%</h7><p class="battery__status">Low battery <i class="ri-plug-line"></i></p></div><div class="battery__pill"><div class="battery__level"><div class="battery__liquid"></div></div></div></div></section>
+        
+
+
+</main>
+  <div class="search">
+<button id="btn-search-close" class="btn btn--search-close"><i class="ri-fingerprint-line"></i></button>
+<div class="search__form-inner">
+    <input id="input" oninput="searchtext()" class="search__input" name="search" type="search" placeholder="Search?" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+  </div>
+    <p class="search__suggestion" id="resultlist"></p>
+</div>
+<script src="https://offsaying.com/OS_Mars/js/disabled.js"></script><!--禁用-->
+<script src="https://offsaying.com/assets/js/demo8_YUCHEN.js"></script>
+<script type="text/javascript" src="https://offsaying.com/OS_Jupiter/Docs/searcher.js"></script>
+<script src="https://offsaying.com/OS_Mars/js/toc.js"></script> <!--TOC-->
+<script src="https://offsaying.com/OS_Mars/js/Battery.js"></script><!--Battery-->
+<!--=============== LOADING ===============-->
+<noscript><style>.loaderbg {display: none;}</style></noscript>
+<script type="text/javascript">$(window).on('load',function(){$(".loaderbg").hide();});/*$(function () {setTimeout(function () {$(".loaderbg").hide();}, 6000);})*/</script>
+
+<!--=============== PAGE PROCESS ===============-->
+<script type="text/javascript" defer>$(document).ready(function () {$.goup({trigger: 100,bottomOffset: 50,locationOffset: 50,title: '0%',titleAsText: true});$(".goup-container").css("background", "#696969 none repeat scroll 0% 0%").css("opacity", 0.9);$(".goup-text").css("font-family", "Poppins").css("font-weight", 1000).css("color", "#000000").css("opacity", 0.9);});$(document).scroll(function () {var d_h = $(document).height();var c_h = $(window).height();var c_t_h = $(window).scrollTop();var schedule = c_t_h / (d_h - c_h - 0.5);var str =Number(schedule * 100).toFixed()+"%";$(".goup-text").text(str);});</script>
+
+<!--=============== 2D 板娘 ==================-->
+<script src="https://offsaying.com/OS_Mars/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"https://offsaying.com/live2dw/","pluginJsPath":"https://offsaying.com/lib/","pluginModelPath":"https://offsaying.com/assets/","tagMode":false,"debug":false,"model":{"jsonPath":"https://offsaying.com/OS_Mars/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+
+<!--=============== MAIN JS ===============-->
+<script src="https://offsaying.com/assets/js/Main_YUCHEN.js"></script>
+</body> 
+</html>
