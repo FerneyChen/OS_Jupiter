@@ -371,5 +371,11 @@ c) Set-Associative
 ##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px'>Ass 1,2,3</p>
 
 
-##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px'>Some theoretical questions</p>
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px'>Some theoretical questions (ChatGPT)</p>
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px'>Some exercises of error detection/correction and memory</p>
+
+
+##### <p style='text-align:center;font-size:19px;font-family:Verdana;font-weight:1000;background-color:#afeeee;vertical-align:middle;padding:0px;margin-top:0px'>Some theoretical questions (first half of the course)</p>
 
