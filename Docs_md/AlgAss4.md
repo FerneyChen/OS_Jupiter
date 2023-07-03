@@ -3,11 +3,12 @@
 
 ## <p style='border-top-left-radius:50px;border-top-right-radius:50px;text-align:center;font-size:19px;font-family:Poppins;font-weight:600;background-color:none;vertical-align:middle;padding:0px;margin-top:0px'>Q 1</p>
 >Let N and M be two 6$\times $6 nilpotent matrices over a field $\mathbb{K}$ 
-(a) Show that if N and M have the same minimal polynomial and the samenullity, then N and M are similar.
+(a) Show that if N and M have the same minimal polynomial and the same nullity, then N and M are similar.
 (b) Prove that the same result is false for 7 × 7 nilpotent matrices.
 
 
-## <p style='border-top-left-radius:50px;border-top-right-radius:50px;text-align:center;font-size:19px;font-family:Poppins;font-weight:600;background-color:none;vertical-align:middle;padding:0px;margin-top:0px'>Sol</p>
+
+### <p style='border-top-left-radius:50px;border-top-right-radius:50px;text-align:center;font-size:19px;font-family:Poppins;font-weight:600;background-color:none;vertical-align:middle;padding:0px;margin-top:0px'>Sol</p>
 
 >(a) 
 $\because $ they are nilpotent $\xrightarrow[]{}$ their eigenvalues are 0 and the possible size of the Jordan blocks corresponding to the partition of n=6
